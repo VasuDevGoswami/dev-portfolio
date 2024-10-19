@@ -406,163 +406,87 @@ h3 {
 
 		.left-column {
 			flex: 1;
-
+		  
 			ul {
-				list-style-type: none;
-				gap: 10px;
-				margin-right: 100px;
-				margin-bottom: 20px;
-
-				li {
-					display: inline-block;
-					background-color: var(--blue-400);
-					padding: 10px 20px;
-					border-radius: 15px;
-					margin-bottom: 10px;
-
-					i {
-						margin-right: 10px;
-						/* Space between icon and text */
-						font-size: 1.2rem;
-
-						/* icon size */
-						/* Specific Technologies */
-						&.fab.fa-angular {
-							color: #DD0031;
-						}
-
-						/* Angular */
-						&.fab.fa-js {
-							color: #F7DF1E;
-						}
-
-						/* JavaScript */
-						&.fab.fa-html5 {
-							color: #E34F26;
-						}
-
-						/* HTML */
-						&.fab.fa-css3-alt {
-							color: #1572B6;
-						}
-
-						/* CSS */
-						&.fab.fa-bootstrap {
-							color: #7952b3;
-						}
-
-						/* Bootstrap */
-						&.fab.fa-java {
-							color: #007396;
-						}
-
-						/* Java */
-
-						/* Frameworks & Tools */
-						&.fas.fa-cogs {
-							color: #4B8BBE;
-						}
-
-						/* Spring Boot / Microservices */
-						&.fas.fa-database {
-							color: #F29111;
-						}
-
-						/* Database */
-						&.fas.fa-check-circle {
-							color: #5EBB5D;
-						}
-
-						/* JUnit */
-						&.fas.fa-tools {
-							color: #A34A3D;
-						}
-
-						/* Maven / Gradle */
-
-						/* DevOps & Cloud */
-						&.fab.fa-docker {
-							color: #2496ED;
-						}
-
-						/* Docker */
-						&.fab.fa-aws {
-							color: #FF9900;
-						}
-
-						/* AWS */
-						&.fab.fa-jenkins {
-							color: #D24939;
-						}
-
-						/* Jenkins */
-
-						/* Project Management */
-						&.fas.fa-tasks {
-							color: #0070B8;
-						}
-
-						/* Jira / Trello */
-
-						/* IDEs */
-						&.fas.fa-code {
-							color: #F05133;
-						}
-
-						/* Eclipse / IntelliJ */
-						&.fab.fa-github {
-							color: #24292f;
-						}
-
-						/* GitHub */
-						&.fab.fa-gitlab {
-							color: #fc6d26;
-						}
-
-						/* GitLab */
-						&.fas.fa-broadcast-tower {
-							color: #231f20;
-						}
-
-						/* Kafka */
-						&.fab.fa-git {
-							color: #f34f29;
-						}
-
-						/* Git */
-						&.fab.fa-linux {
-							color: #FCC624;
-						}
-
-						/* Linux */
-						&.fas.fa-cloud {
-							color: #430098;
-						}
-
-						/* Heroku */
-					}
+			  list-style-type: none;
+			  gap: 10px;
+			  margin-right: 100px;
+			  margin-bottom: 20px;
+		  
+			  li {
+				display: inline-block;
+				background-color: var(--blue-400);
+				padding: 10px 20px;
+				border-radius: 15px;
+				margin-bottom: 10px;
+		  
+				i {
+				  margin-right: 10px;
+				  font-size: 1.2rem;
+		  
+				  &.fab.fa-angular { color: #DD0031; }
+				  &.fab.fa-js { color: #F7DF1E; }
+				  &.fab.fa-html5 { color: #E34F26; }
+				  &.fab.fa-css3-alt { color: #1572B6; }
+				  &.fab.fa-bootstrap { color: #7952b3; }
+				  &.fab.fa-java { color: #007396; }
+				  &.fas.fa-cogs { color: #4B8BBE; }
+				  &.fas.fa-database { color: #F29111; }
+				  &.fas.fa-check-circle { color: #5EBB5D; }
+				  &.fas.fa-tools { color: #A34A3D; }
+				  &.fab.fa-docker { color: #2496ED; }
+				  &.fab.fa-aws { color: #FF9900; }
+				  &.fab.fa-jenkins { color: #D24939; }
+				  &.fas.fa-tasks { color: #0070B8; }
+				  &.fas.fa-code { color: #F05133; }
+				  &.fab.fa-github { color: #24292f; }
+				  &.fab.fa-gitlab { color: #fc6d26; }
+				  &.fas.fa-broadcast-tower { color: #231f20; }
+				  &.fab.fa-git { color: #f34f29; }
+				  &.fab.fa-linux { color: #FCC624; }
+				  &.fas.fa-cloud { color: #430098; }
 				}
+			  }
 			}
-
-			h3 i {
+		  
+			h3 {
+			  i {
 				margin-right: 8px;
 				font-size: 1.5rem;
 				color: #007bff;
-
-				&.fas.fa-laptop-code {
-					color: #28a745;
-				}
-
-				&.fas.fa-server {
-					color: #17a2b8;
-				}
-
-				&.fas.fa-tools {
-					color: #ffc107;
-				}
-
+		  
+				&.fas.fa-laptop-code { color: #28a745; }
+				&.fas.fa-server { color: #17a2b8; }
+				&.fas.fa-tools { color: #ffc107; }
+			  }
 			}
-		}
+		  
+			@media (max-width: 768px) {
+			  ul {
+				margin-right: 20px;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 5px;
+		  
+				li {
+				  width: calc(50% - 10px);
+				  padding: 8px 12px;
+		  
+				  i {
+					font-size: 1rem;
+				  }
+				  span {
+					font-size: 0.8rem;
+				  }
+				}
+			  }
+		  
+			  h3 i {
+				font-size: 1.2rem;
+			  }
+			}
+		  }
+		  
 
 		.right-column {
 			flex: 1;
