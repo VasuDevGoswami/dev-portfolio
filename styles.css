@@ -27,7 +27,6 @@ body {
 	font-style: normal;
 	font-size: 20px;
 	min-height: 100vh;
-	/* Ensure body takes full height */
 }
 
 a {
@@ -48,9 +47,7 @@ header {
 	margin: auto;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	background: linear-gradient(to bottom, rgba(197, 255, 255, 0.8), rgba(249, 244, 242, 0.5));
-	/* Gradient background */
 	box-shadow: 0 53px 46px rgba(0, 0, 0, 0.1);
-	/* Shadow for depth */
         top: 0;
         left: 0;
         right: 0;
@@ -75,11 +72,8 @@ header {
 			margin-right: 20px;
 			border-radius: 50%;
 			overflow: hidden;
-			/* Ensures image stays within the circle */
 			background-color: var(--base-800);
-			/* Optional background */
 			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-			/* Shadow for the logo */
 
 		}
 
@@ -88,7 +82,6 @@ header {
 			height: 100%;
 			object-fit: cover;
 			transition: transform 0.3s;
-			/* Transition for image scaling */
 
 		}
 
@@ -114,17 +107,13 @@ header {
 					padding: 10px 20px;
 					color: var(--base);
 					background: linear-gradient(to right, var(--base-100), var(--base-200));
-					/* Gradient for buttons */
 					border-radius: 10px;
 					box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-					/* Shadow for buttons */
 					transition: background-color 0.3s, transform 0.3s;
-					/* Smooth transitions */
 
 					&:hover {
 						background-color: var(--base-100);
 						transform: translateY(-2px);
-						/* Lift effect on hover */
 						text-decoration: none;
 
 						.fas {
@@ -137,30 +126,24 @@ header {
 							color: #4CAF50;
 						}
 
-						/* Home */
 						&.fa-cogs {
 							color: #FF9800;
 						}
 
-						/* Skills */
 						&.fa-project-diagram {
 							color: #2196F3;
 						}
 
-						/* Projects */
 						&.fa-envelope {
 							color: #F44336;
 						}
 
-						/* Contact Me */
 					}
 				}
 
 				i {
 					margin-right: 8px;
-					/* Space between icon and text */
 					font-size: 1.2rem;
-					/* icon size */
 				}
 			}
 		}
@@ -357,7 +340,20 @@ h1 {
 			gap: 10px;
 		}
 	}
+
+	@media (max-width: 768px) { 
+		.marquee {
+			height: 50px;
+			img {
+				width: 50px;
+			}
+		}
+
+	}
 }
+
+
+
 
 @keyframes marquee {
 	0% {
@@ -550,39 +546,30 @@ h3 {
 
 			h3 i {
 				margin-right: 8px;
-				/* Space between icon and text */
 				font-size: 1.5rem;
-				/* Adjust icon size as needed */
 				color: #007bff;
-				/* Default Header Icon Color */
 
-				/* Section-Specific Header Icons */
 				&.fas.fa-laptop-code {
 					color: #28a745;
 				}
 
-				/* Frontend */
 				&.fas.fa-server {
 					color: #17a2b8;
 				}
 
-				/* Backend */
 				&.fas.fa-tools {
 					color: #ffc107;
 				}
 
-				/* Tools */
 			}
 		}
 
 		.right-column {
 			flex: 1;
 			background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-			/* Subtle gradient */
 			padding: 30px;
 			border-radius: 12px;
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-			/* Soft shadow */
 			font-family: 'Arial', sans-serif;
 
 			h3 {
