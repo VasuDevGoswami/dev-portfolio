@@ -51,7 +51,6 @@ header {
 	/* Gradient background */
 	box-shadow: 0 53px 46px rgba(0, 0, 0, 0.1);
 	/* Shadow for depth */
-	 position: fixed;
         top: 0;
         left: 0;
         right: 0;
@@ -827,7 +826,6 @@ footer {
     padding: 20px;
     background-color: #CCDDE7;
     color: #333;
-    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
