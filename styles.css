@@ -529,7 +529,7 @@ h3 {
 				  padding: 8px 12px;
 		  
 				  i {
-					font-size: 1rem;
+					font-size: 1.5rem;
 				  }
 				  span {
 					font-size: 0.9rem;
@@ -691,33 +691,6 @@ h3 {
 					}
 				}
 
-			}
-		}
-		@media (max-width: 768px) {
-			article {
-			  padding: 20px;
-	  
-			  h3 {
-				font-size: 1.2rem;
-			  }
-	  
-			  div {
-				font-size: 0.8rem;
-			  }
-	  
-			  p {
-				font-size: 0.75rem;
-			  }
-	  
-			  figure {
-				width: 80%;
-				margin: 0 auto;
-	  
-				img {
-				  height: 80%;
-				  object-fit: contain;
-				}
-			  }
 			}
 		}
 	}
