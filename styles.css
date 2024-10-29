@@ -644,80 +644,111 @@ h3 {
 }
 
 .work-experience {
-	.jobs {
-		display: flex;
-		gap: 30px;
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #2C3E50;
+        text-align: center;
+    }
 
-		@media(max-width:1024px) {
-			flex-direction: column;
-		}
+    .jobs {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
 
-		article {
-			background-color: var(--yellow-100);
-			padding: 30px;
-			border-radius: 30px;
-			flex: 1;
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
 
-			h3 {
-				margin-top: 20px;
-				margin-bottom: 10px;
-			}
+        article {
+            background: linear-gradient(145deg, #FFFFFF, #F3F4F6);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            transition: transform 0.3s;
 
-			div {
-				font-weight: 600;
-				margin-bottom: 5px;
-				color: var(--base-800);
-			}
+            &:hover {
+                transform: scale(1.02);
+            }
 
-			p {
-				margin-bottom: 10px;
-			}
+            h3 {
+                margin-top: 15px;
+                margin-bottom: 8px;
+                font-size: 1.5rem;
+                color: #2C3E50;
+            }
 
-			figure {
-				width: 100%;
-				padding-top: 56.25%;
-				overflow: hidden;
-				position: relative;
-				border-radius: 15px;
+            .job-duration {
+                font-weight: 600;
+                margin-bottom: 5px;
+                color: #7B8A8B;
+            }
 
-				img {
-					position: absolute;
-					top: 0;
-					left: 0;
-					height: 100%;
-					object-fit: cover;
-					transition: ease 3s all;
-				}
+            p {
+                margin-bottom: 10px;
+                font-size: 1rem;
+                line-height: 1.6;
+                color: #4A4A4A;
+            }
 
-				figcaption {
-					position: absolute;
-					bottom: 0;
-					left: 0;
-					right: 0;
-					background-color: rgba(0, 0, 0, 0.5);
-					color: var(--base-100);
-					text-align: center;
-					padding: 10px;
-					opacity: 0;
-					visibility: hidden;
-					transition: ease 0.3s all;
-				}
+            .job-title {
+                display: inline-block;
+                margin-top: 10px;
+                font-size: 0.9rem;
+                font-style: italic;
+                color: #007ACC;
+                background-color: rgba(0, 122, 204, 0.1);
+                padding: 5px 10px;
+                border-radius: 8px;
+            }
 
-				&:hover {
-					figcaption {
-						opacity: 1;
-						visibility: visible;
-					}
+            figure {
+                width: 100%;
+                padding-top: 56.25%;
+                overflow: hidden;
+                position: relative;
+                border-radius: 15px;
 
-					img {
-						transform: scale(1.2);
-					}
-				}
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: transform 3s ease-in-out;
+                }
 
-			}
-		}
-	}
+                figcaption {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    color: #FFFFFF;
+                    text-align: center;
+                    padding: 10px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    figcaption {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
 }
+
 
 .bento {
 	.bento-grid {
