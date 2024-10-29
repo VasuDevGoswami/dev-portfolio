@@ -463,24 +463,34 @@ h3 {
 
 		.left-column {
 			flex: 1;
-		  
+
 			ul {
 			  list-style-type: none;
 			  gap: 10px;
 			  margin-right: 100px;
 			  margin-bottom: 20px;
-		  
+			  display: flex;
+              flex-wrap: wrap;
+
 			  li {
 				display: inline-block;
 				background-color: var(--blue-400);
 				padding: 10px 20px;
 				border-radius: 15px;
 				margin-bottom: 10px;
-		  
+				animation: wave 2.5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+				 &:nth-child(odd) {
+				            animation-delay: 0.2s;
+
+                 }
+                   &:nth-child(even) {
+                   animation-delay: 0.4s;
+                 }
+
 				i {
 				  margin-right: 10px;
 				  font-size: 1.2rem;
-		  
+
 				  &.fab.fa-angular { color: #DD0031; }
 				  &.fab.fa-js { color: #F7DF1E; }
 				  &.fab.fa-html5 { color: #E34F26; }
@@ -505,29 +515,29 @@ h3 {
 				}
 			  }
 			}
-		  
+
 			h3 {
 			  i {
 				margin-right: 8px;
 				font-size: 1.5rem;
 				color: #007bff;
-		  
+
 				&.fas.fa-laptop-code { color: #28a745; }
 				&.fas.fa-server { color: #17a2b8; }
 				&.fas.fa-tools { color: #ffc107; }
 			  }
 			}
-		  
+
 			@media (max-width: 768px) {
 			  ul {
 				margin-right: 20px;
 				display: flex;
 				flex-wrap: wrap;
 				gap: 5px;
-		  
+
 				li {
 				  padding: 8px 12px;
-		  
+
 				  i {
 					font-size: 1.5rem;
 				  }
@@ -536,13 +546,13 @@ h3 {
 				  }
 				}
 			  }
-		  
+
 			  h3 i {
 				font-size: 1.2rem;
 			  }
 			}
 		  }
-		  
+
 
 		.right-column {
 			flex: 1;
@@ -597,27 +607,40 @@ h3 {
 				h3 {
 				  font-size: 20px;
 				}
-			
+
 				p {
 				  font-size: 16px;
 				}
-			
+
 				.intro-text {
 					font-size: 14px;
 				}
-			
+
 				.highlight {
 				  display: none;
 				}
-			
-				p:not(.highlight,.intro-text) {
-				  display: none;
-				}
-			  }
 
-		}
+        p:not(.highlight, .intro-text) {
+          display: none;
+        }
+      }
+    }
+  }
+}
 
-	}
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(-3px);
+  }
 }
 
 .work-experience {
